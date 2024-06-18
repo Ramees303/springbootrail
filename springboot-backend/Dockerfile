@@ -13,7 +13,9 @@ FROM openjdk:17
 
 #EXPOSE 8080
 
-RUN mkdir -p /app
+#RUN mkdir -p /app
+
+WORKDIR /app
 
 COPY --from=builder /app/target/springboot-backend-*.jar /app/springboot-backend.jar
 
