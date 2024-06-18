@@ -2,7 +2,10 @@ FROM maven:3.9.7-eclipse-temurin-17-alpine as builder
 
 WORKDIR /app
 
-COPY . .
+#COPY . .
+
+COPY pom.xml .
+COPY src ./src
 
 
 RUN mvn -DskipTests compile
