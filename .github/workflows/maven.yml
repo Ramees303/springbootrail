@@ -45,6 +45,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
+          context: .
           file: ./springboot-backend/Dockerfile
           push: true
           tags: ramzworks/demoapp:latest
