@@ -48,8 +48,8 @@ jobs:
           push: true
           tags: ramzworks/demoapp:latest
 
-      - name: Log out from Docker Hub
-        uses: docker/logout-action@v2
+     # - name: Log out from Docker Hub
+      #  uses: docker/logout-action@v2
 
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
