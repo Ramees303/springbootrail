@@ -38,7 +38,7 @@ jobs:
         image: ramzworks/demoapp
         tags: latest
         registry: docker.io
-        dockerfile: Dockerfile.ci
+        dockerfile: springboot-backend/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
