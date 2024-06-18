@@ -32,8 +32,6 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B -f springboot-backend/pom.xml -DskipTests compile package
-        
-    
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -45,7 +43,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          # context: .
           file: ./springboot-backend/Dockerfile
           push: true
           tags: ramzworks/demoapp:latest
