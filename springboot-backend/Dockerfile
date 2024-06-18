@@ -2,7 +2,9 @@ FROM maven:3.9.7-eclipse-temurin-17-alpine as builder
 
 WORKDIR /app
 
-COPY . .
+#COPY . .
+COPY springboot-backend/pom.xml .
+COPY springboot-backend/src ./src
 
 RUN mvn -DskipTests compile
 
